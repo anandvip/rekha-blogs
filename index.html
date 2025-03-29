@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Change and Your Home Insurance: What Canadian Homeowners Need to Know</title>
+    <style>
+        :root {
+            --primary-color: #0055a4;
+            --secondary-color: #e71d36;
+            --accent-color: #4caf50;
+            --text-color: #333333;
+            --light-bg: #f8f9fa;
+            --white: #ffffff;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-main);
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            font-style: italic;
+            color: #666;
+        }
+        
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        
+        .meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #666;
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+        
+        .audio-player {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .audio-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .audio-controls {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .play-button {
+            background-color: var(--white);
+            color: var(--primary-color);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .play-button:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .play-button i {
+            font-size: 20px;
+        }
+        
+        .progress-container {
+            flex-grow: 1;
+            height: 8px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background-color: var(--white);
+            width: 0%;
+            border-radius: 4px;
+        }
+        
+        .time-display {
+            font-size: 14px;
+            font-family: monospace;
+        }
+        
+        .featured-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+        
+        .blog-content {
+            margin-bottom: 30px;
+        }
+        
+        .blog-content p {
+            margin-bottom: 20px;
+        }
+        
+        .blog-content h2 {
+            color: var(--primary-color);
+            margin: 30px 0 15px;
+        }
+        
+        .cta-section {
+            background-color: var(--light-bg);
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: background-color 0.2s;
+        }
+        
+        .cta-button:hover {
+            background-color: #3d8b40;
+        }
+        
+        .author-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .author-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .author-info h3 {
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+        
+        .social-share {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .social-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+        
+        .social-icon:hover {
+            transform: scale(1.1);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .featured-image {
+                height: 200px;
+            }
+            
+            .author-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .audio-controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .audio-title {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Canadian Shield Insurance</div>
+            <div class="tagline">Protecting Canadians with confidence and care</div>
+        </header>
+        
+        <h1>Climate Change and Your Home Insurance: What Canadian Homeowners Need to Know in 2025</h1>
+        
+        <div class="meta">
+            <span>Posted on March 29, 2025</span>
+            <span>By Rekha Sangwal, Senior Insurance Advisor</span>
+        </div>
+        
+        <div class="audio-player">
+            <div class="audio-title">
+                <span><i class="fas fa-headphones"></i> Listen to this article</span>
+                <span class="time-display">0:00 / 0:00</span>
+            </div>
+            <div class="audio-controls">
+                <button class="play-button" id="playButton">
+                    <i class="fas fa-play" id="playIcon"></i>
+                </button>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+            </div>
+        </div>
+        
+        <img src="/api/placeholder/800/300" alt="House in flood waters with Canadian flag" class="featured-image">
+        
+        <div class="blog-content" id="blogContent">
+            <p>As we step further into 2025, Canadian homeowners are facing an increasingly complex insurance landscape. Climate change isn't just a distant threat—it's already affecting insurance premiums, coverage options, and claim frequencies across our beautiful country.</p>
+            
+            <p>From the increased flooding in British Columbia to the intensifying winter storms in Ontario and Quebec, to the expanding wildfire seasons in Alberta—Canadians everywhere are experiencing the impacts of our changing climate firsthand.</p>
+            
+            <h2>Rising Premiums: What's Behind the Increase?</h2>
+            
+            <p>If you've noticed your home insurance premiums increasing over the past few years, you're not alone. According to the Insurance Bureau of Canada, property insurance claims related to severe weather have more than quadrupled across Canada in the last decade, now exceeding $2.4 billion annually.</p>
+            
+            <p>This isn't just about repairing damage after disasters strike—it's about the insurance industry adjusting to a new normal where extreme weather events are becoming more frequent and severe. Insurers are having to recalculate risk models that were developed in a more stable climate era.</p>
+            
+            <h2>New Coverage Considerations for Canadian Homeowners</h2>
+            
+            <p>Standard home insurance policies in Canada are evolving in response to climate change. Here are some key areas you should be reviewing in your current policy:</p>
+            
+            <p>1. <strong>Overland Flood Coverage</strong>: Once considered uninsurable, many Canadian insurers now offer optional coverage for overland flooding. If you live near a body of water or in a low-lying area, this coverage is becoming essential rather than optional.</p>
+            
+            <p>2. <strong>Wildfire Protection</strong>: In provinces like British Columbia and Alberta where wildfire risks have increased, insurers are looking more closely at proximity to forested areas and community fire protection resources. Some policies now include measures to help protect homes during fire events.</p>
+            
+            <p>3. <strong>Sewer Backup Coverage</strong>: With more intense rainfall events, sewer backup incidents are increasing in urban areas. This coverage, often offered as an add-on, is becoming more important for homeowners in cities like Toronto, Montreal, and Vancouver.</p>
+            
+            <h2>What Can Canadian Homeowners Do?</h2>
+            
+            <p>In the face of these changes, proactive measures can help protect both your home and your financial wellbeing:</p>
+            
+            <p>1. <strong>Review Your Policy Annually</strong>: Climate risks are evolving rapidly. What was adequate coverage last year might not be sufficient today.</p>
+            
+            <p>2. <strong>Invest in Resilience</strong>: Many insurers now offer discounts for homes with climate-resilient features like backwater valves, sump pumps with battery backups, impact-resistant roofing, and fire-resistant landscaping.</p>
+            
+            <p>3. <strong>Understand Your Local Risks</strong>: Climate change impacts vary significantly across Canada's diverse geography. Understanding the specific risks in your region can help you prioritize appropriate coverage.</p>
+            
+            <p>4. <strong>Consider Higher Deductibles</strong>: If you can afford to pay more out-of-pocket in the event of a claim, opting for a higher deductible can help manage premium increases while maintaining essential coverage.</p>
+            
+            <h2>The Canadian Advantage: Government Programs</h2>
+            
+            <p>Unlike many other countries, Canada has several government programs designed to help homeowners with climate-related disasters. The Disaster Financial Assistance Arrangements (DFAA) provides federal funding to provinces for disaster recovery, while programs like the National Disaster Mitigation Program focus on reducing flood risks.</p>
+            
+            <p>Additionally, the recently expanded Flood Hazard Identification and Mapping Program is helping Canadians better understand their flood risks—information that's crucial for making informed insurance decisions.</p>
+            
+            <h2>Looking Forward: The Future of Home Insurance in Canada</h2>
+            
+            <p>As we move through 2025 and beyond, expect to see more innovations in the Canadian insurance market. These may include more sophisticated risk-based pricing (with both penalties and incentives), increased use of technology for risk assessment, and potentially new insurance products designed specifically for climate-related perils.</p>
+            
+            <p>The key takeaway? The relationship between climate change and home insurance is complex and evolving. Staying informed and working with a knowledgeable insurance advisor who understands the Canadian context is more important than ever.</p>
+        </div>
+        
+        <div class="cta-section">
+            <h2>Protect Your Home in Changing Times</h2>
+            <p>Uncertain about whether your current policy provides adequate protection against climate-related risks? I'm here to help you navigate these changes with confidence.</p>
+            <a href="#" class="cta-button">Schedule a Free Policy Review</a>
+        </div>
+        
+        <div class="author-section">
+            <img src="/api/placeholder/80/80" alt="Rekha Sangwal" class="author-image">
+            <div class="author-info">
+                <h3>Rekha Sangwal</h3>
+                <p>Senior Insurance Advisor with over 15 years of experience helping Canadian homeowners protect what matters most. Specialized in climate risk assessment and personalized coverage solutions.</p>
+            </div>
+        </div>
+        
+        <div class="social-share">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+        
+        <footer>
+            <p>© 2025 Canadian Shield Insurance. This blog is for informational purposes only and does not constitute professional insurance advice.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Audio player with Web Speech API - carefully implemented to be reliable
+        document.addEventListener('DOMContentLoaded', function() {
+            const playButton = document.getElementById('playButton');
+            const playIcon = document.getElementById('playIcon');
+            const progressBar = document.getElementById('progressBar');
+            const timeDisplay = document.querySelector('.time-display');
+            const blogContent = document.getElementById('blogContent');
+            
+            // Get all paragraph and heading text content from the blog
+            const contentElements = Array.from(blogContent.querySelectorAll('p, h2'));
+            const paragraphs = contentElements.map(element => element.textContent);
+            
+            let isPlaying = false;
+            let currentParagraphIndex = 0;
+            let totalDuration = 0;
+            let currentTime = 0;
+            let animationId = null;
+            
+            // Calculate approximate total duration
+            const totalWords = paragraphs.join(' ').split(/\s+/).length;
+            totalDuration = Math.ceil(totalWords / 150 * 60); // 150 words per minute
+            
+            // Format time for display
+            function formatTime(seconds) {
+                const mins = Math.floor(seconds / 60);
+                const secs = Math.floor(seconds % 60);
+                return `${mins}:${secs < 10 ? '0' + secs : secs}`;
+            }
+            
+            // Update time display initially
+            timeDisplay.textContent = `0:00 / ${formatTime(totalDuration)}`;
+            
+            // Play/pause functionality
+            playButton.addEventListener('click', togglePlayPause);
+            
+            function togglePlayPause() {
+                if (!isPlaying) {
+                    startPlaying();
+                } else {
+                    stopPlaying();
+                }
+            }
+            
+            // Initialize speech synthesis
+            const synth = window.speechSynthesis;
+            
+            // Function to speak a specific paragraph
+            function speakParagraph(index) {
+                if (index >= paragraphs.length) {
+                    stopPlaying();
+                    resetPlayer();
+                    return;
+                }
+                
+                // Create a new utterance for this paragraph
+                const utterance = new SpeechSynthesisUtterance(paragraphs[index]);
+                
+                // Use a slightly slower rate for better comprehension
+                utterance.rate = 0.9;
+                utterance.pitch = 1.0;
+                
+                // Try to get a good voice - prefer English
+                let voices = synth.getVoices();
+                const englishVoices = voices.filter(voice => 
+                    voice.lang.includes('en') && voice.name.includes('Female')
+                );
+                
+                if (englishVoices.length > 0) {
+                    utterance.voice = englishVoices[0];
+                }
+                
+                // Highlight the paragraph being read (optional)
+                highlightElement(contentElements[index]);
+                
+                // When this paragraph finishes, move to the next one
+                utterance.onend = function() {
+                    // Move to next paragraph
+                    currentParagraphIndex++;
+                    speakParagraph(currentParagraphIndex);
+                };
+                
+                // If there's an error, try to recover
+                utterance.onerror = function(event) {
+                    console.log('Speech error detected', event);
+                    // Move to next paragraph
+                    currentParagraphIndex++;
+                    speakParagraph(currentParagraphIndex);
+                };
+                
+                // Start speaking this paragraph
+                synth.speak(utterance);
+            }
+            
+            // Highlight the element being read
+            function highlightElement(element) {
+                // Remove any previous highlights
+                contentElements.forEach(el => {
+                    el.style.backgroundColor = '';
+                    el.style.color = '';
+                });
+                
+                // Highlight this element
+                element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                element.style.backgroundColor = 'rgba(0, 85, 164, 0.1)';
+                element.style.color = '#0055a4';
+            }
+            
+            function startPlaying() {
+                // Cancel any existing speech
+                synth.cancel();
+                
+                isPlaying = true;
+                playIcon.className = 'fas fa-pause';
+                
+                // Start speaking from current paragraph
+                speakParagraph(currentParagraphIndex);
+                
+                // Start animation to update progress bar
+                let lastTime = Date.now();
+                
+                function updateProgress() {
+                    if (!isPlaying) return;
+                    
+                    const now = Date.now();
+                    const deltaTime = (now - lastTime) / 1000;
+                    lastTime = now;
+                    
+                    currentTime += deltaTime;
+                    
+                    // Update progress bar and time display
+                    const progressPercent = (currentTime / totalDuration) * 100;
+                    progressBar.style.width = `${Math.min(progressPercent, 100)}%`;
+                    timeDisplay.textContent = `${formatTime(currentTime)} / ${formatTime(totalDuration)}`;
+                    
+                    // End playback when we reach the end
+                    if (currentTime >= totalDuration) {
+                        stopPlaying();
+                        resetPlayer();
+                        return;
+                    }
+                    
+                    animationId = requestAnimationFrame(updateProgress);
+                }
+                
+                updateProgress();
+            }
+            
+            function stopPlaying() {
+                synth.cancel(); // Stop any current speech
+                isPlaying = false;
+                playIcon.className = 'fas fa-play';
+                
+                if (animationId) {
+                    cancelAnimationFrame(animationId);
+                    animationId = null;
+                }
+                
+                // Remove highlights
+                contentElements.forEach(el => {
+                    el.style.backgroundColor = '';
+                    el.style.color = '';
+                });
+            }
+            
+            function resetPlayer() {
+                stopPlaying();
+                currentParagraphIndex = 0;
+                currentTime = 0;
+                progressBar.style.width = '0%';
+                timeDisplay.textContent = `0:00 / ${formatTime(totalDuration)}`;
+            }
+            
+            // Allow clicking on progress bar to seek
+            const progressContainer = document.querySelector('.progress-container');
+            progressContainer.addEventListener('click', function(e) {
+                if (!totalDuration) return;
+                
+                const rect = progressContainer.getBoundingClientRect();
+                const clickPosition = (e.clientX - rect.left) / rect.width;
+                currentTime = totalDuration * clickPosition;
+                
+                // Estimate paragraph position based on time
+                const percentComplete = currentTime / totalDuration;
+                currentParagraphIndex = Math.floor(percentComplete * paragraphs.length);
+                
+                // Update UI
+                progressBar.style.width = `${percentComplete * 100}%`;
+                timeDisplay.textContent = `${formatTime(currentTime)} / ${formatTime(totalDuration)}`;
+                
+                // If we were playing, restart from new position
+                if (isPlaying) {
+                    stopPlaying();
+                    startPlaying();
+                }
+            });
+            
+            // Handle page visibility changes
+            document.addEventListener('visibilitychange', function() {
+                if (document.hidden && isPlaying) {
+                    stopPlaying();
+                }
+            });
+            
+            // Force load voices at the beginning
+            function loadVoices() {
+                synth.getVoices();
+            }
+            
+            // Some browsers need a little time to load voices
+            loadVoices();
+            
+            if (speechSynthesis.onvoiceschanged !== undefined) {
+                speechSynthesis.onvoiceschanged = loadVoices;
+            }
+        });
+    </script>
+</body>
+</html>
