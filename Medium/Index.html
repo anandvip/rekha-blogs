@@ -1,0 +1,114 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suggested Blog Topics for Insurance Agent</title>
+  <style>
+    :root {
+      --bg-color: #f4f6f8;
+      --panel-bg: #ffffff;
+      --accent-color: #4a90e2;
+      --text-color: #333;
+      --border-color: #ddd;
+      --shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 2rem;
+  color: var(--text-color);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.accordion {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.panel {
+  background: var(--panel-bg);
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+}
+
+.panel-header {
+  padding: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #e6eef8;
+}
+
+.panel-content {
+  display: none;
+  padding: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.panel.open .panel-content {
+  display: block;
+}
+
+  </style>
+</head>
+<body>
+  <h1>Suggested Blog Topics for Your Insurance Practice</h1>
+  <div class="accordion"><div class="panel">
+  <div class="panel-header">1. Educational & Evergreen</div>
+  <div class="panel-content">
+    <ul>
+      <li><strong>How to Choose the Right Life Insurance in Ontario</strong></li>
+      <li><strong>Your First Time Buying Insurance? Start Here</strong></li>
+      <li><strong>Home Insurance 101: What’s Covered and What’s Not</strong></li>
+      <li><strong>Why Tenants in Ontario Should Consider Renters Insurance</strong></li>
+    </ul>
+  </div>
+</div>
+
+<div class="panel">
+  <div class="panel-header">2. Visual & Social-Ready</div>
+  <div class="panel-content">
+    <ul>
+      <li><strong>Infographic: What’s Covered Under Home Insurance</strong></li>
+      <li><strong>Life Insurance Explained in 60 Seconds (Visual Breakdown)</strong></li>
+      <li><strong>5 Quick Questions to Ask Before Buying Travel Insurance</strong></li>
+    </ul>
+  </div>
+</div>
+
+<div class="panel">
+  <div class="panel-header">3. Trust-Building / Human Side</div>
+  <div class="panel-content">
+    <ul>
+      <li><strong>Behind the Scenes: Why I Became an Insurance Agent</strong></li>
+      <li><strong>Top 5 Myths About Insurance Agents — Busted</strong></li>
+      <li><strong>Real Talk: When Insurance Actually Saved My Client</strong></li>
+    </ul>
+  </div>
+</div>
+
+<div class="panel">
+  <div class="panel-header">4. Local & Timely</div>
+  <div class="panel-content">
+    <ul>
+      <li><strong>Driving in Ontario? What You Must Know About Auto Insurance</strong></li>
+      <li><strong>Planning a Winter Trip? Here’s What Your Travel Insurance Should Cover</strong></li>
+      <li><strong>Ontario Health Insurance vs. Private Plans: What’s the Difference?</strong></li>
+    </ul>
+  </div>
+</div>
+
+  </div>  <script>
+    document.querySelectorAll('.panel-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const panel = header.parentElement;
+        panel.classList.toggle('open');
+      });
+    });
+  </script></body>
+</html>
